@@ -1,0 +1,106 @@
+.GatefoldLayer{
+	position: relative;
+	inset: 0;
+	z-index: 30;
+
+	justify-content: center;
+	align-items: stretch;
+	display: flex;
+
+	cursor: pointer;
+	overflow: hidden;
+
+	width: 100%;
+	height: 100%;
+}
+
+.gate{
+	display: flex;
+	flex-direction: column;
+	justify-content:stretch;
+	align-items: stretch;
+
+	gap: 20px;
+	padding: 20px;
+	width: 100%;
+}
+
+.gate.right{
+	background-color: black;
+	transform-origin: right center;
+}
+
+.gate.left{
+	background-color: #110c0c;
+	transform-origin: left center;
+}
+
+/*.container-v{
+	color: #f00;
+	height: 100%;
+}*/
+.container-h{
+	display: flex;
+	margin: 0;
+	background-color: #f9f7f2;
+	background-image: url("@images/door-left.png");
+	background-repeat: no-repeat;
+	background-position: bottom right;
+	background-size: cover;
+	height: 100%;
+	gap: 20px;
+}
+
+.paper{
+	display: flex;
+	z-index: 0;
+	gap: 20px;
+
+	margin: 0;
+	height: 100%;
+
+	box-shadow: inset 0 0 20px 0 rgba(0,0,0,0.5);
+	background-color: #f9f7f2;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.paper.left{
+	background-image: url("@images/door-left.png");
+	background-position: bottom right;
+}
+
+.paper.right{
+	background-image: url("@images/door-right.png");
+	background-position: bottom left;
+}
+
+.light{
+	width: 100%;
+	height: 100%;
+	box-shadow: inset 0 0 20px 0 rgba(0,0,0,0.5);
+	background-color: var(--custom-gate-light);
+}
+
+/*.paper{
+	flex: 1;
+	margin: 0;
+
+	box-shadow: inset 0 0 20px 0 rgba(0,0,0,0.5);
+	background-image: radial-gradient(
+		#DDDDDD,
+		rgb(255,235,205)
+	);
+}*/
+
+.wood{
+	flex: 1;
+	margin: 0;
+
+	box-shadow: inset 0 0 40px 0 rgba(0,0,0,0.5);
+	background-image: url("@images/wood_x256.png");
+	/*background-image: radial-gradient(
+		#523923,
+		rgb(34, 20, 15)
+	);*/
+}

@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Borel&family=Zen+Dots&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Boogaloo:ital@0;1&display=swap');
+
+:root{
+	--font-borel: "Borel", cursive;
+	--font-zen: "Zen Loop", cursive;
+	--font-boogaloo: "Boogaloo", sans-serif;
+
+	--custom-gate-light: rgba(255, 106, 193, 0.2);
+
+	--custom-border-out: #000000;
+	--custom-border-in: #FFFFFF;
+	--custom-border-bkg: #ffbbdb;
+	/*--custom-border-bkg: #f7276c;*/
+
+	--intro-main: #690c39;
+	--intro-sub: #47033c;
+	--intro-text-outline: #ffe2f6;
+	--intro-background: #ffe2f6;
+
+	--text-section: #ff97d0;
+	--text-section-outline: #000;
+	--text-section-glow: #ff0088;
+
+	--text-titles: #4c234f;
+	--text-subtitles: #4c234f;
+	--text-simple: #690c39;
+
+	--text-buttons: #FFFFFF;
+	--button-normal: #000000;
+	--button-hover: #402040;
+
+	--button-circle: rgba(0,0,0,0.6);
+	--button-circle-hover: rgba(0,0,0,1);
+
+	--gradient-background-swap: #f15cf1;
+	--gradient-background-a: rgb(255, 211, 255);
+	--gradient-background-b: rgba(251, 238, 251, 1);
+	--gradient-background-c: rgb(255, 243, 247);
+
+	--btn-background-img: url("@images/border_txt-sakura.png");
+	--intro-img-boy: url("@images/boy-sakura.png");
+	--intro-img-girl: url("@images/girl-sakura.png");
+	--intro-img-boy-over: url("@images/boy-sakura-over.png");
+	--intro-img-girl-over: url("@images/girl-sakura-over.png");
+}
+
+[data-theme="paper"]{
+	--font-borel: "Borel", cursive;
+	--font-zen: "Zen Loop", cursive;
+	--font-boogaloo: "Boogaloo", sans-serif;
+
+	--custom-gate-light: rgba(255, 255, 255, 0.2);
+
+	--custom-border-out: #000000;
+	--custom-border-in: #FFFFFF;
+	--custom-border-bkg: #000;
+
+	--intro-main: #5e5e5e;
+	--intro-sub: #383838;
+	--intro-text-outline: #fff;
+	--intro-background: #fff;
+
+	--text-section: #7e7e7e;
+	--text-section-outline: #000;
+	--text-section-glow: #adadad;
+
+	--text-titles: #313131;
+	--text-subtitles: #505050;
+	--text-simple: #000;
+
+	--text-buttons: #FFFFFF;
+	--button-normal: #000000;
+	--button-hover: #424242;
+
+	--button-circle: rgba(0,0,0,0.6);
+	--button-circle-hover: rgba(0,0,0,1);
+
+	--gradient-background-swap: #797979;
+	--gradient-background-a: rgb(184, 184, 184);
+	--gradient-background-b: rgb(221, 221, 221);
+	--gradient-background-c: rgb(233, 233, 233);
+
+	--btn-background-img: url("@images/border_txt-paper.png");
+	--intro-img-boy: url("@images/boy-paper.png");
+	--intro-img-girl: url("@images/girl-paper.png");
+	--intro-img-boy-over: url("@images/boy-paper-over.png");
+	--intro-img-girl-over: url("@images/girl-paper-over.png");
+}
+
+[data-theme="night"]{
+	--font-borel: "Borel", cursive;
+	--font-zen: "Zen Loop", cursive;
+	--font-boogaloo: "Boogaloo", sans-serif;
+
+	--custom-gate-light: rgba(255, 251, 0, 0.2);
+
+	--custom-border-out: #000;
+	--custom-border-in: #FFF;
+	--custom-border-bkg: #8e7aff;
+
+	--intro-main: #0d004d;
+	--intro-sub: #03001f;
+	--intro-text-outline: #ccbeff;
+	--intro-background: #ccbeff;
+
+	--text-section: #7e7e7e;
+	--text-section-outline: #000;
+	--text-section-glow: #adadad;
+
+	--text-titles: #1b0752;
+	--text-subtitles: #24216b;
+	--text-simple: rgb(26, 16, 160);
+
+	--text-buttons: #000;
+	--button-normal: #fff;
+	--button-hover: #c4b8ff;
+
+	--button-circle: rgba(255,255,255,0.6);
+	--button-circle-hover: rgba(255,255,255,1);
+
+	--gradient-background-swap: #01030f;
+	--gradient-background-a: rgb(9, 11, 121);
+	--gradient-background-b: rgb(40, 28, 206);
+	--gradient-background-c: rgb(174, 225, 255);
+
+	--btn-background-img: url("@images/border_txt-night.png");
+	--intro-img-boy: url("@images/boy-night.png");
+	--intro-img-girl: url("@images/girl-night.png");
+	--intro-img-boy-over: url("@images/boy-night-over.png");
+	--intro-img-girl-over: url("@images/girl-night-over.png");
+}
+
+/* Used on intro for names */
+h1{
+	font-family: var(--font-borel);
+	font-weight: 600;
+	font-style: normal;
+	line-height: 1.1;
+	color: var(--intro-main);
+	vertical-align: middle;
+	text-align: center;
+
+	text-shadow: -2px -2px 0 var(--intro-text-outline), 2px -2px 0 var(--intro-text-outline), -2px 2px 0 var(--intro-text-outline), 2px 2px 0 var(--intro-text-outline);
+}
+
+/* Used on intro for text */
+h2{
+	font-family: var(--font-borel);
+	font-weight: 500;
+	font-style: normal;
+	line-height: 1.2;
+	color: var(--intro-sub);
+	vertical-align: middle;
+	text-align: center;
+
+	text-shadow: -2px -2px 0 var(--intro-text-outline), 2px -2px 0 var(--intro-text-outline), -2px 2px 0 var(--intro-text-outline), 2px 2px 0 var(--intro-text-outline);
+}
+
+/* Title for sections */
+h3{
+	font-family: var(--font-boogaloo);
+	font-size: 2.5rem;
+	font-weight: 500;
+	font-style: normal;
+	line-height: 1.2;
+	color: var(--text-section);
+	vertical-align: middle;
+	margin:0;
+	text-align: center;
+
+	color: white;
+
+	text-shadow:
+		-1px -1px 0 black,
+		 1px -1px 0 black,
+		-1px  1px 0 black,
+		 1px  1px 0 black;
+
+	text-shadow:
+		0 0 5px var(--text-section-glow),
+		0 0 20px var(--text-section-glow);
+}
+
+/* Card titles */
+h4{
+	font-family: var(--font-zen);
+	font-size: 2.5rem;
+	font-weight: 500;
+	font-style: normal;
+	line-height: 1.2;
+	color: var(--text-titles);
+	vertical-align: middle;
+	margin: 0;
+	text-align: center;
+}
+
+/* Card subtitles */
+h5{
+	font-family: var(--font-zen);
+	font-size: 2rem;
+	font-weight: 300;
+	font-style: normal;
+	line-height: 1.2;
+	color: var(--text-subtitles);
+	vertical-align: middle;
+	margin: 0;
+	text-align: center;
+}
+
+/* Normal text */
+p{
+	font-family: var(--font-zen);
+	font-size: 1rem;
+	font-weight: 300;
+	font-style: normal;
+	line-height: 1.2;
+	color: var(--text-simple);
+	vertical-align: middle;
+	text-align: center;
+	margin: 10px;
+}
+
+br{
+	height: 10px;
+}
+
+.button-txtimg{
+	display: flex;
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	border: none;
+	cursor: pointer;
+	background: var(--button-normal);
+	font-family: var(--font-zen);
+	font-size: clamp(1rem, 2cqw, 3rem);
+	color: var(--text-buttons);
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+}
+.button-txtimg:hover{
+	background: var(--button-hover);
+}
+
+.button-circle{
+	z-index: 100;
+	background: var(--button-circle);
+	color: white;
+	border: none;
+	padding: 20px;
+	border-radius: 10px;
+	cursor: pointer;
+	backdrop-filter: blur(10px);
+}
+.button-circle:hover{
+	background: var(--button-circle-hover);
+}
+
+/* Tema Sakura 			Sakura */
+/* Tema Oscuro 			Dark */
+/* Tema Pergamino 		Paper */
+/* Tema Noche Japonesa 	Noche Japonesa */

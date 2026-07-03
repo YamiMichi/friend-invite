@@ -1,0 +1,10 @@
+.Buttons{
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+	z-index: 100;
+	padding: 0;
+
+	display: flex;
+	flex-direction: column;
+}
