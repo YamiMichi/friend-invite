@@ -1,17 +1,98 @@
 @import url('https://fonts.googleapis.com/css2?family=Borel&family=Zen+Dots&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Boogaloo:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fleur+De+Leah&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montaga&display=swap');
 
 :root{
+	--font-fleur: "Fleur De Leah", cursive;
+	--font-cinzel: "Cinzel Decorative", serif;
 	--font-borel: "Borel", cursive;
 	--font-zen: "Zen Loop", cursive;
 	--font-boogaloo: "Boogaloo", sans-serif;
+
+	--font-intro-top: "Cinzel Decorative", serif;
+	--font-intro-bot: "Fleur De Leah", cursive;
+
+	--font-section-name: "Cookie", cursive;
+	--font-section-name-size: 2.5rem;
+	--font-section-name-height: 1.4;
+
+	--font-section-title-a: "Cinzel", serif;
+	--font-section-title-b: "Cinzel", serif;
+	--font-section-text: "Montaga", serif;
+
+	--font-buttons: "Montaga", serif;
+
+	---custom-gate-light: rgba(63, 146, 255, 0.2);
+
+	--custom-border-out: #000000;
+	--custom-border-in: #e3e4f8;
+	/*--custom-border-in: #e0deec;*/
+	--custom-border-bkg: #1f202c;
+	/*--custom-border-bkg: #3845ff;*/
+
+	--intro-main: #d4d9ff;
+	--intro-sub: #ebf0ff;
+	--intro-text-outline: #ffe2f6;
+	--intro-background: #ffe2f6;
+
+	--text-section: #7e7e7e;
+	--text-section-outline: #000;
+	--text-section-glow: #adadad;
+
+	--text-titles: #1b0752;
+	--text-subtitles: #24216b;
+	--text-simple: rgb(8, 3, 68);
+
+	--text-buttons: #000;
+	--button-normal: #fff;
+	--button-hover: #c4b8ff;
+
+	--button-circle: rgba(255,255,255,0.6);
+	--button-circle-hover: rgba(255,255,255,1);
+
+	--gradient-background-swap: #01030f;
+	--gradient-background-a: rgb(20, 21, 82);
+	--gradient-background-b: rgb(73, 66, 173);
+	--gradient-background-c: rgb(137, 139, 255);
+
+	--btn-background-img: url("@images/border_txt-fantasy.png");
+	
+	--box-bkg-border-pattern: url("@images/pattern-A.png");
+	--box-margin-pad: 4px;
+
+	--intro-img-boy: url("@images/boy-paper.png");
+	--intro-img-girl: url("@images/girl-paper.png");
+	--intro-img-boy-over: url("@images/boy-paper-over.png");
+	--intro-img-girl-over: url("@images/girl-paper-over.png");
+}
+
+[data-theme="sakura"]{
+	--font-borel: "Borel", cursive;
+	--font-zen: "Zen Loop", cursive;
+	--font-boogaloo: "Boogaloo", sans-serif;
+
+	--font-intro-top: "Borel", cursive;
+	--font-intro-bot: "Borel", cursive;
+
+	--font-section-name: "Boogaloo", sans-serif;
+	--font-section-name-size: 2.5rem;
+	--font-section-name-height: 1.2;
+
+	--font-section-title-a: "Zen Loop", cursive;
+	--font-section-title-b: "Zen Loop", cursive;
+	--font-section-text: "Zen Loop", cursive;
+
+	--font-buttons: "Zen Loop", cursive;
 
 	--custom-gate-light: rgba(255, 106, 193, 0.2);
 
 	--custom-border-out: #000000;
 	--custom-border-in: #FFFFFF;
 	--custom-border-bkg: #ffbbdb;
-	/*--custom-border-bkg: #f7276c;*/
 
 	--intro-main: #690c39;
 	--intro-sub: #47033c;
@@ -39,6 +120,10 @@
 	--gradient-background-c: rgb(255, 243, 247);
 
 	--btn-background-img: url("@images/border_txt-sakura.png");
+	
+	--box-bkg-border-pattern: url("@images/lines.png");
+	--box-margin-pad: 10px;
+
 	--intro-img-boy: url("@images/boy-sakura.png");
 	--intro-img-girl: url("@images/girl-sakura.png");
 	--intro-img-boy-over: url("@images/boy-sakura-over.png");
@@ -49,6 +134,19 @@
 	--font-borel: "Borel", cursive;
 	--font-zen: "Zen Loop", cursive;
 	--font-boogaloo: "Boogaloo", sans-serif;
+
+	--font-intro-top: "Borel", cursive;
+	--font-intro-bot: "Borel", cursive;
+
+	--font-section-name: "Boogaloo", sans-serif;
+	--font-section-name-size: 2.5rem;
+	--font-section-name-height: 1.2;
+
+	--font-section-title-a: "Zen Loop", cursive;
+	--font-section-title-b: "Zen Loop", cursive;
+	--font-section-text: "Zen Loop", cursive;
+
+	--font-buttons: "Zen Loop", cursive;
 
 	--custom-gate-light: rgba(255, 255, 255, 0.2);
 
@@ -82,6 +180,10 @@
 	--gradient-background-c: rgb(233, 233, 233);
 
 	--btn-background-img: url("@images/border_txt-paper.png");
+
+	--box-bkg-border-pattern: url("@images/lines.png");
+	--box-margin-pad: 10px;
+
 	--intro-img-boy: url("@images/boy-paper.png");
 	--intro-img-girl: url("@images/girl-paper.png");
 	--intro-img-boy-over: url("@images/boy-paper-over.png");
@@ -92,6 +194,19 @@
 	--font-borel: "Borel", cursive;
 	--font-zen: "Zen Loop", cursive;
 	--font-boogaloo: "Boogaloo", sans-serif;
+
+	--font-intro-top: "Borel", cursive;
+	--font-intro-bot: "Borel", cursive;
+
+	--font-section-name: "Boogaloo", sans-serif;
+	--font-section-name-size: 2.5rem;
+	--font-section-name-height: 1.2;
+
+	--font-section-title-a: "Zen Loop", cursive;
+	--font-section-title-b: "Zen Loop", cursive;
+	--font-section-text: "Zen Loop", cursive;
+
+	--font-buttons: "Zen Loop", cursive;
 
 	--custom-gate-light: rgba(255, 251, 0, 0.2);
 
@@ -125,6 +240,10 @@
 	--gradient-background-c: rgb(174, 225, 255);
 
 	--btn-background-img: url("@images/border_txt-night.png");
+
+	--box-bkg-border-pattern: url("@images/lines.png");
+	--box-margin-pad: 10px;
+
 	--intro-img-boy: url("@images/boy-night.png");
 	--intro-img-girl: url("@images/girl-night.png");
 	--intro-img-boy-over: url("@images/boy-night-over.png");
@@ -133,7 +252,7 @@
 
 /* Used on intro for names */
 h1{
-	font-family: var(--font-borel);
+	font-family: var(--font-intro-top);
 	font-weight: 600;
 	font-style: normal;
 	line-height: 1.1;
@@ -146,7 +265,7 @@ h1{
 
 /* Used on intro for text */
 h2{
-	font-family: var(--font-borel);
+	font-family: var(--font-intro-bot);
 	font-weight: 500;
 	font-style: normal;
 	line-height: 1.2;
@@ -159,11 +278,11 @@ h2{
 
 /* Title for sections */
 h3{
-	font-family: var(--font-boogaloo);
-	font-size: 2.5rem;
+	font-family: var(--font-section-name);
+	font-size: var(--font-section-name-size);
 	font-weight: 500;
 	font-style: normal;
-	line-height: 1.2;
+	line-height: var(--font-section-name-height);
 	color: var(--text-section);
 	vertical-align: middle;
 	margin:0;
@@ -184,7 +303,7 @@ h3{
 
 /* Card titles */
 h4{
-	font-family: var(--font-zen);
+	font-family: var(--font-section-title-a);
 	font-size: 2.5rem;
 	font-weight: 500;
 	font-style: normal;
@@ -197,7 +316,7 @@ h4{
 
 /* Card subtitles */
 h5{
-	font-family: var(--font-zen);
+	font-family: var(--font-section-title-b);
 	font-size: 2rem;
 	font-weight: 300;
 	font-style: normal;
@@ -210,7 +329,7 @@ h5{
 
 /* Normal text */
 p{
-	font-family: var(--font-zen);
+	font-family: var(--font-section-text);
 	font-size: 1rem;
 	font-weight: 300;
 	font-style: normal;
@@ -233,7 +352,7 @@ br{
 	border: none;
 	cursor: pointer;
 	background: var(--button-normal);
-	font-family: var(--font-zen);
+	font-family: var(--font-buttons);
 	font-size: clamp(1rem, 2cqw, 3rem);
 	color: var(--text-buttons);
 	text-align: center;

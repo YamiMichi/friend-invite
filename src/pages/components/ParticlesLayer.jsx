@@ -9,6 +9,11 @@ export const Petals = ({
 	theme
 }) => {
 	const PetalColors = {
+		fantasy: {
+			gradient_a: "#f7feff",
+			gradient_b: "#cbeaff",
+			outline: "#80c1ff"
+		},
 		sakura: {
 			gradient_a: "#fff1fa",
 			gradient_b: "#ffc4e5",
@@ -78,6 +83,7 @@ export const Petals = ({
 						>
 							<div className="petal-wave">
 								<Petal 
+									theme={theme}
 									gradient_a={PetalColors[theme].gradient_a}
 									gradient_b={PetalColors[theme].gradient_b}
 									outline={PetalColors[theme].outline}
@@ -95,6 +101,15 @@ export const Flowers = ({
 	theme
 }) => {
 	const FlowerColors = {
+		fantasy: {
+			gradient_a: "#bed7ff",
+			gradient_b: "#f7fbff",
+			outline: "#97beff",
+			flower_in: "#fff",
+			flower_out: "#afcfff",
+			flower_out_outline: "#7db1ff",
+			flower_center: "#bed7ff"
+		},
 		sakura: {
 			gradient_a: "#ffc4e5",
 			gradient_b: "#fff1fa",

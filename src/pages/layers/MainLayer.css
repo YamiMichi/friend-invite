@@ -56,7 +56,7 @@
 }
 
 .intro{
-	position:relative;
+	position: relative;
 	z-index: 0;
 
 	display: flex;
@@ -145,6 +145,29 @@
 	transform: scale(1,-1);
 }
 
+.intro-bkg-center{
+	position: absolute;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: stretch;
+	
+	inset: 0;
+	box-sizing: border-box;
+	padding: 3% 0 1% 0;
+
+	width: 100%;
+	height: 100%;
+
+	background-image: url("@images/portrait_bkg.png");
+
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+
+	z-index: 0;
+}
+
 .intro h1{
 	z-index: 2;
 	font-size: clamp(5rem, 6cqw, 7rem);
@@ -183,7 +206,7 @@
 }
 
 .separate{
-	height: 10px;
+	height: var(--box-margin-pad);
 
 	background-color: var(--custom-border-out);
 }

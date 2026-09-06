@@ -27,6 +27,11 @@
 	font-weight: 300;
 }
 
+.btn-fantasy{
+	border: 5px solid rgb(25, 51, 107);
+	background: rgb(200, 220, 255);
+	color: rgb(32, 30, 116);
+}
 .btn-sakura{
 	border: 5px solid rgb(190, 27, 103);
 	background: pink;

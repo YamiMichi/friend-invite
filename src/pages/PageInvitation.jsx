@@ -19,12 +19,13 @@ function PageInvitation(){
 	//+ THEMES                                                                                    +
 	//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 	const Themes = Object.freeze({
+		FANTASY: "fantasy",
 		SAKURA: "sakura",
 		PAPER: "paper",
 		NIGHT: "night"
 	});
 	const [theme, setTheme] = useState(
-		localStorage.getItem("theme") ?? Themes.SAKURA);
+		localStorage.getItem("theme") ?? Themes.FANTASY);
 	const changeTheme = (themeName) => {setTheme(themeName)};
 
 	//TODO Check swap code for gradients...........................................................
@@ -95,9 +96,9 @@ function PageInvitation(){
 			<Petals 
 				theme={theme}
 			/>
-			<Flowers 
-				theme={theme}
-			/>
+			{theme !== "fantasy" && (
+				<Flowers theme={theme}/>
+			)}
 
 			{/* Layer: MainLayer */}
 			<MainLayer

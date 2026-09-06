@@ -3,22 +3,30 @@ import { motion } from "framer-motion";
 
 import "./MainLayer.css"
 
+import PortraitBorder from "@images/border.png";
+import PortraitPokemon from "@images/pokes.png";
+
+import SalonFantasy from "@images/salon-fantasy.png";
 import SalonSakura from "@images/salon-sakura.png";
 import SalonPaper from "@images/salon-paper.png";
 import SalonNight from "@images/salon-night.png";
 
+import CatedralFantasy from "@images/catedral-fantasy.png";
 import CatedralSakura from "@images/catedral-sakura.png";
 import CatedralPaper from "@images/catedral-paper.png";
 import CatedralNight from "@images/catedral-night.png";
 
+import VestimentaFantasy from "@images/vestimenta-fantasy.png";
 import VestimentaSakura from "@images/vestimenta-sakura.png";
 import VestimentaPaper from "@images/vestimenta-paper.png";
 import VestimentaNight from "@images/vestimenta-night.png";
 
+import SobreFantasy from "@images/sobre-fantasy.png";
 import SobreSakura from "@images/sobre-sakura.png";
 import SobrePaper from "@images/sobre-paper.png";
 import SobreNight from "@images/sobre-night.png";
 
+import RegalosFantasy from "@images/regalos-fantasy.png";
 import RegalosSakura from "@images/regalos-sakura.png";
 import RegalosPaper from "@images/regalos-paper.png";
 import RegalosNight from "@images/regalos-night.png";
@@ -34,7 +42,8 @@ export const MainLayer = ({
 	{/* Date: YYYY-MM-DD T HH:mm:ss.sss Z*/}
 	{/* 'Z' indicates UTC format */}
 	{/* CDMX on december was UTC-6 */}
-	const targetDate = new Date("2026-12-04T20:00:00Z");
+	//const targetDate = new Date("2026-12-04T20:00:00Z");
+	const targetDate = new Date("2026-12-05T01:30:00Z");
 
 	const [showMapChurch, setShowMapChurch] = useState(false);
 	const [showMapSalon, setShowMapSalon] = useState(false);
@@ -43,6 +52,13 @@ export const MainLayer = ({
 	const salonURL = "https://maps.app.goo.gl/LsfWtkahmtMsVYjcA";
 
 	const ThemeImages = {
+		fantasy: {
+			salon: SalonFantasy,
+			catedral: CatedralFantasy,
+			vestimenta: VestimentaFantasy,
+			sobre: SobreFantasy,
+			regalos: RegalosFantasy
+		},
 		sakura: {
 			salon: SalonSakura,
 			catedral: CatedralSakura,
@@ -72,51 +88,15 @@ export const MainLayer = ({
 			<div className="container">
 				{/* --------------------------------------------------------------------------- */}
 				{/* Section: Intro */}
-				<div className="intro">
-					<div className="intro-bkg-left"/>
-					<motion.div className="intro-bkg-left-b"
-						animate={{
-							opacity: [1,.7,1]
-						}}
-						transition={{
-							duration: 3,
-							repeat: Infinity,
-							ease: "linear"
-						}}
-					/>
-
-					<div className="intro-bkg-right"/>
-					<motion.div className="intro-bkg-right-b"
-						animate={{
-							opacity: [1,.7,1]
-						}}
-						transition={{
-							duration: 3,
-							repeat: Infinity,
-							ease: "linear"
-						}}
-					/>
-					
-					<motion.h1
-						initial={{ opacity: 0, y: 40 }}
-						animate={!showGate && { opacity: 1, y: 0 }}
-						transition={{ duration: 2, ease: "easeOut" }}
-					>
-						Moises & Michel
-					</motion.h1>
-					<motion.h2
-						initial={{ opacity: 0, y: 30 }}
-						animate={!showGate && { opacity: 1, y: 0 }}
-						transition={{ duration: 1, ease: "easeOut", delay: 2 }}
-					>
-						Te invitamos a nuestra boda!!!
-					</motion.h2>
-				</div>
+				{theme === "fantasy" 
+					? <Portrait_Fantasy showGate={showGate} />
+					: <Portrait_Classic showGate={showGate} />
+				}
 
 				{/* --------------------------------------------------------------------------- */}
 				{/* Section: Date */}
 				<CustomColorBox>
-					<AnimatedText_Section text={"-Fecha-"}/>
+					<AnimatedText_Section text={"- Fecha -"}/>
 				</CustomColorBox>
 
 				<CustomMarginBox>
@@ -134,7 +114,7 @@ export const MainLayer = ({
 				{/* Section: Locations */}
 				{/* Location A: Church ........................................................ */}
 				<CustomColorBox>
-					<AnimatedText_Section text={"-Ceremonia-"}/>
+					<AnimatedText_Section text={"- Ceremonia -"}/>
 				</CustomColorBox>
 
 				<CustomMarginBox>
@@ -142,7 +122,9 @@ export const MainLayer = ({
 						<AnimatedText_TitleSmall text={"Catedral Jésus"}/>
 						<AnimatedText_TitleBig text={"Señor de la Misericordia"}/>
 						<AnimatedImage image={ThemeImages[theme].catedral} width={"100%"}/>
-						<AnimatedText_Normal text={"Ubicación: Av. Gustavo Baz #174, Col. Benito Juarez 3ra sección, Nezahualcóyotl Estado de México, CP. 57000"}/>
+						<AnimatedText_Normal text={"Ubicación:"}/>
+						<AnimatedText_Normal text={"Av. Gustavo Baz #174, Col. Benito Juarez 3ra sección, Nezahualcóyotl Estado de México, CP. 57000"}/>
+						<AnimatedText_Normal text={"Hora: 7:30pm"}/>
 					</div>
 
 					<div className="separate"/>
@@ -172,7 +154,7 @@ export const MainLayer = ({
 
 				{/* Location A: Salon.......................................................... */}
 				<CustomColorBox>
-					<AnimatedText_Section text={"-Celebración-"}/>
+					<AnimatedText_Section text={"- Celebración -"}/>
 				</CustomColorBox>
 
 				<CustomMarginBox>
@@ -180,7 +162,9 @@ export const MainLayer = ({
 						<AnimatedText_TitleSmall text={"Salón"}/>
 						<AnimatedText_TitleBig text={"La Hacienda"}/>
 						<AnimatedImage image={ThemeImages[theme].salon} width={"100%"}/>
-						<AnimatedText_Normal text={"Ubicación: Av. Ángel de la Independencia #330, Evolucion, Nezahualcóyotl Estado de México, CP. 57700"}/>
+						<AnimatedText_Normal text={"Ubicación:"}/>
+						<AnimatedText_Normal text={"Av. Ángel de la Independencia #330, Evolucion, Nezahualcóyotl Estado de México, CP. 57700"}/>
+						<AnimatedText_Normal text={"Hora: 8:00pm"}/>
 					</div>
 
 					<div className="separate"/>
@@ -211,7 +195,7 @@ export const MainLayer = ({
 				{/* ------------------------------------------------------------------------------- */}
 				{/* Section: Vestiment code */}
 				<CustomColorBox>
-					<AnimatedText_Section text={"-Vestimenta-"}/>
+					<AnimatedText_Section text={"- Vestimenta -"}/>
 				</CustomColorBox>
 
 				<CustomMarginBox>
@@ -241,7 +225,7 @@ export const MainLayer = ({
 				{/* ------------------------------------------------------------------------------- */}
 				{/* Section: Presents */}
 				<CustomColorBox>
-					<AnimatedText_Section text={"-Regalos-"}/>
+					<AnimatedText_Section text={"- Regalos -"}/>
 				</CustomColorBox>
 
 				<CustomMarginBox>
@@ -258,6 +242,142 @@ export const MainLayer = ({
 						<AnimatedImage image={ThemeImages[theme].regalos} width={"100%"}/>
 					</div>
 				</CustomMarginBox>
+			</div>
+		</div>
+	)
+}
+
+export const Portrait_Classic = ({
+	showGate
+}) => {
+	return(
+		<div className="intro">
+			<div className="intro-bkg-left"/>
+			<motion.div className="intro-bkg-left-b"
+				animate={{
+					opacity: [1,.7,1]
+				}}
+				transition={{
+					duration: 3,
+					repeat: Infinity,
+					ease: "linear"
+				}}
+			/>
+
+			<div className="intro-bkg-right"/>
+			<motion.div className="intro-bkg-right-b"
+				animate={{
+					opacity: [1,.7,1]
+				}}
+				transition={{
+					duration: 3,
+					repeat: Infinity,
+					ease: "linear"
+				}}
+			/>
+			
+			<motion.h1
+				initial={{ opacity: 0, y: 40 }}
+				animate={!showGate && { opacity: 1, y: 0 }}
+				transition={{ duration: 2, ease: "easeOut" }}
+			>
+				Moises & Michel
+			</motion.h1>
+			<motion.h2
+				initial={{ opacity: 0, y: 30 }}
+				animate={!showGate && { opacity: 1, y: 0 }}
+				transition={{ duration: 1, ease: "easeOut", delay: 2 }}
+			>
+				Te invitamos a nuestra boda!!!
+			</motion.h2>
+		</div>
+	)
+}
+
+export const Portrait_Fantasy = ({
+	showGate
+}) => {
+	return(
+		<div className="intro">
+			{/* Background*/}
+			<div className="intro-bkg-center">
+				<div style={{
+					flex: "1 1 0",
+					minHeight: 0,
+
+					display: "flex",
+					justifyContent: "center",
+					alignItems: "center",
+					padding: "50px 0 10px 0"
+				}}>
+					{/* Text */}
+					<motion.h1
+						initial={{ opacity: 0, y: 40 }}
+						animate={!showGate && { opacity: 1, y: 0 }}
+						transition={{ duration: 2, ease: "easeOut" }}
+						style={{
+							margin: 0,
+							textShadow: '3px 3px 5px rgba(0, 0, 0, 0.7)',
+							fontSize: "clamp(2.5rem, 7vw, 7rem)"
+						}}
+					>
+						NUESTRA BODA
+					</motion.h1>
+				</div>
+
+				<div
+					style={{
+						flex: "0 1 auto",
+						minHeight: 0,
+						minWidth: 0,
+
+						display: "flex",
+						justifyContent: "center",
+						alignItems: "center",
+
+						overflow: "hidden",
+
+						backgroundImage: `url(${PortraitBorder})`,
+						backgroundSize: "contain",
+						backgroundRepeat: "no-repeat",
+						backgroundPosition: "center",
+						alignContent: "center"
+					}}
+				>
+					{/* Pokes */}
+					<img src={PortraitPokemon} style={{
+						display: "block",
+						objectFit: "contain",
+						maxHeight: "100%",
+						maxWidth: "100%",
+						width: "auto",
+						height: "auto"
+					}}/>
+				</div>
+
+				<div style={{
+					flex: "1 1 0",
+					minHeight: 0,
+
+					display: "flex",
+					justifyContent: "center",
+					alignItems: "center",
+					padding: "10px 0 50px 0"
+				}}>
+					<motion.h2
+						initial={{ opacity: 0, y: 30 }}
+						animate={!showGate && { opacity: 1, y: 0 }}
+						transition={{ duration: 1, ease: "easeOut", delay: 2 }}
+						style={{
+							textShadow: '3px 3px 5px rgba(0, 0, 0, 0.7)',
+							fontWeight: "580",
+							fontSize: "clamp(3.5rem, 8vw, 8rem)",
+							margin: 0
+						}}
+					>
+						Moises & Michel
+					</motion.h2>
+				</div>
 			</div>
 		</div>
 	)

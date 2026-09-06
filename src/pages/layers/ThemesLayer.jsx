@@ -6,6 +6,12 @@ export const ThemesLayer = ({
 }) => {
 	return(
 		<div className="ThemesButtons" onClick={setShowThemes}>
+			<button className="btn btn-fantasy" onClick={() => changeTheme("fantasy")}>
+				Bosque
+			</button>
+
+			<div style={{height:"10px"}}/>
+
 			<button className="btn btn-paper" onClick={() => changeTheme("paper")}>
 				Manga
 			</button>

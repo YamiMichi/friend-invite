@@ -5,11 +5,11 @@
 	padding: 20px;
 
 	background: var(--custom-border-in);
-	background-image: url("@images/lines.png");
+	background-image: var(--box-bkg-border-pattern);
 }
 
 .margin-in{
-	padding: 10px;
+	padding: var(--box-margin-pad);
 	background: var(--custom-border-out);
 }
 
@@ -45,6 +45,8 @@
 	justify-content: center;
 
 	background-color: var(--custom-border-bkg);
+	background-image: url("@images/glass.png");
+	background-size: cover;
 }
 
 .color-bkg-left{
