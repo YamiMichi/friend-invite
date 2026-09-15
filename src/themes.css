@@ -22,6 +22,8 @@
 
 	--font-section-title-a: "Cinzel", serif;
 	--font-section-title-b: "Cinzel", serif;
+	--font-section-title-a-size: 2.5rem;
+	--font-section-title-b-size: 2rem;
 	--font-section-text: "Montaga", serif;
 
 	--font-buttons: "Montaga", serif;
@@ -84,6 +86,8 @@
 
 	--font-section-title-a: "Zen Loop", cursive;
 	--font-section-title-b: "Zen Loop", cursive;
+	--font-section-title-a-size: 2.5rem;
+	--font-section-title-b-size: 2rem;
 	--font-section-text: "Zen Loop", cursive;
 
 	--font-buttons: "Zen Loop", cursive;
@@ -144,6 +148,8 @@
 
 	--font-section-title-a: "Zen Loop", cursive;
 	--font-section-title-b: "Zen Loop", cursive;
+	--font-section-title-a-size: 2.5rem;
+	--font-section-title-b-size: 2rem;
 	--font-section-text: "Zen Loop", cursive;
 
 	--font-buttons: "Zen Loop", cursive;
@@ -204,6 +210,8 @@
 
 	--font-section-title-a: "Zen Loop", cursive;
 	--font-section-title-b: "Zen Loop", cursive;
+	--font-section-title-a-size: 2.5rem;
+	--font-section-title-b-size: 2rem;
 	--font-section-text: "Zen Loop", cursive;
 
 	--font-buttons: "Zen Loop", cursive;
@@ -304,7 +312,7 @@ h3{
 /* Card titles */
 h4{
 	font-family: var(--font-section-title-a);
-	font-size: 2.5rem;
+	font-size: var(--font-section-title-a-size);
 	font-weight: 500;
 	font-style: normal;
 	line-height: 1.2;
@@ -317,7 +325,7 @@ h4{
 /* Card subtitles */
 h5{
 	font-family: var(--font-section-title-b);
-	font-size: 2rem;
+	font-size: var(--font-section-title-b-size);
 	font-weight: 300;
 	font-style: normal;
 	line-height: 1.2;

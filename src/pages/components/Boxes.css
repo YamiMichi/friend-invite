@@ -23,7 +23,7 @@
 }
 
 .section h4{
-	font-size: clamp(2.5rem, 3.5cqw, 5rem);
+	font-size: clamp(2rem, 3.5cqw, 5rem);
 }
 .section h5{
 	font-size: clamp(2rem, 3cqw, 4rem);

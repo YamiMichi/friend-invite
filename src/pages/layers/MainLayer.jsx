@@ -43,13 +43,14 @@ export const MainLayer = ({
 	{/* 'Z' indicates UTC format */}
 	{/* CDMX on december was UTC-6 */}
 	//const targetDate = new Date("2026-12-04T20:00:00Z");
-	const targetDate = new Date("2026-12-05T01:30:00Z");
+	const targetDate = new Date("2026-12-05T01:00:00Z");
 
 	const [showMapChurch, setShowMapChurch] = useState(false);
 	const [showMapSalon, setShowMapSalon] = useState(false);
 
 	const churchURL = "https://maps.app.goo.gl/vxp5hZrnYzufdRbH9";
 	const salonURL = "https://maps.app.goo.gl/LsfWtkahmtMsVYjcA";
+	const listURL = "https://www.amazon.com.mx/wedding/guest-view/2GU7I9RMGLUGU";
 
 	const ThemeImages = {
 		fantasy: {
@@ -124,7 +125,7 @@ export const MainLayer = ({
 						<AnimatedImage image={ThemeImages[theme].catedral} width={"100%"}/>
 						<AnimatedText_Normal text={"Ubicación:"}/>
 						<AnimatedText_Normal text={"Av. Gustavo Baz #174, Col. Benito Juarez 3ra sección, Nezahualcóyotl Estado de México, CP. 57000"}/>
-						<AnimatedText_Normal text={"Hora: 7:30pm"}/>
+						<AnimatedText_Normal text={"Hora: 7:00pm"}/>
 					</div>
 
 					<div className="separate"/>
@@ -241,6 +242,14 @@ export const MainLayer = ({
 						<AnimatedText_Normal text={"También estaremos aceptando cualquier obsequio que compres desde:"}/>
 						<AnimatedImage image={ThemeImages[theme].regalos} width={"100%"}/>
 					</div>
+
+					<div className="separate"/>
+					<div className="section-horizontal">
+						<button className="button-txtimg" onClick={() => window.open(listURL, "_blank")}>
+							-Accede a nuestra lista de Amazon-
+						</button>
+					</div>
+
 				</CustomMarginBox>
 			</div>
 		</div>
