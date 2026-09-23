@@ -51,6 +51,7 @@ export const MainLayer = ({
 	const churchURL = "https://maps.app.goo.gl/vxp5hZrnYzufdRbH9";
 	const salonURL = "https://maps.app.goo.gl/LsfWtkahmtMsVYjcA";
 	const listURL = "https://www.amazon.com.mx/wedding/guest-view/2GU7I9RMGLUGU";
+	const assistURL = "https://docs.google.com/forms/d/e/1FAIpQLSc1Pmvamwx2N3LUG0sOwf_9ncBHlw-1NckPdsRhx53_cDkW-g/viewform?usp=publish-editor";
 
 	const ThemeImages = {
 		fantasy: {
@@ -247,6 +248,28 @@ export const MainLayer = ({
 					<div className="section-horizontal">
 						<button className="button-txtimg" onClick={() => window.open(listURL, "_blank")}>
 							-Accede a nuestra lista de Amazon-
+						</button>
+					</div>
+
+				</CustomMarginBox>
+
+				{/* ------------------------------------------------------------------------------- */}
+				{/* Section: Assist */}
+				<CustomColorBox>
+					<AnimatedText_Section text={"- Asistencia -"}/>
+				</CustomColorBox>
+
+				<CustomMarginBox>
+					<div className="section-vertical">
+						<AnimatedText_TitleBig text={"¿Nos acompañas en este gran día?"}/>
+						<AnimatedText_Normal text={"Por último agradeceríamos mucho si nos ayudas a organizar nuestra celebración confirmando tu asistencia."}/>
+						<AnimatedText_Normal text={"Será un honor contar con tu presencia y crear recuerdos inolvidables."}/>
+					</div>
+
+					<div className="separate"/>
+					<div className="section-horizontal">
+						<button className="button-txtimg" onClick={() => window.open(assistURL, "_blank")}>
+							-Confirmar mi asistencia-
 						</button>
 					</div>
 
