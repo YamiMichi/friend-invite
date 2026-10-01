@@ -407,7 +407,7 @@ export const Portrait_Fantasy = ({
 							margin: 0
 						}}
 					>
-						Moises & Michel
+						Moises y Michel
 					</motion.h2>
 				</div>
 			</div>
