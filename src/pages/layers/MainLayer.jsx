@@ -309,6 +309,7 @@ export const Portrait_Classic = ({
 			/>
 			
 			<motion.h1
+				translate="no"
 				initial={{ opacity: 0, y: 40 }}
 				animate={!showGate && { opacity: 1, y: 0 }}
 				transition={{ duration: 2, ease: "easeOut" }}
@@ -397,6 +398,7 @@ export const Portrait_Fantasy = ({
 					padding: "10px 0 50px 0"
 				}}>
 					<motion.h2
+						translate="no"
 						initial={{ opacity: 0, y: 30 }}
 						animate={!showGate && { opacity: 1, y: 0 }}
 						transition={{ duration: 1, ease: "easeOut", delay: 2 }}
