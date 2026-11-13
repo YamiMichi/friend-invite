@@ -50,7 +50,8 @@ export const MainLayer = ({
 
 	const churchURL = "https://maps.app.goo.gl/vxp5hZrnYzufdRbH9";
 	const salonURL = "https://maps.app.goo.gl/LsfWtkahmtMsVYjcA";
-	const listURL = "https://www.amazon.com.mx/wedding/guest-view/2GU7I9RMGLUGU";
+	const listURL_amazon = "https://www.amazon.com.mx/wedding/guest-view/2GU7I9RMGLUGU";
+	const listURL_liverpool = "https://mesaderegalos.liverpool.com.mx/milistaderegalos/60043202";
 	const assistURL = "https://docs.google.com/forms/d/e/1FAIpQLSc1Pmvamwx2N3LUG0sOwf_9ncBHlw-1NckPdsRhx53_cDkW-g/viewform?usp=publish-editor";
 
 	const ThemeImages = {
@@ -245,9 +246,17 @@ export const MainLayer = ({
 					</div>
 
 					<div className="separate"/>
+					<CustomColorBox_NoBkg>
+						<div className="section-vertical">
+							<p style={{color:"#fff", padding:"0", margin:"0"}}> Accede a nuestras listas: </p>
+						</div>
+					</CustomColorBox_NoBkg>
 					<div className="section-horizontal">
-						<button className="button-txtimg" onClick={() => window.open(listURL, "_blank")}>
-							-Accede a nuestra lista de Amazon-
+						<button className="button-txtimg" onClick={() => window.open(listURL_amazon, "_blank")}>
+							-Amazon-
+						</button>
+						<button className="button-txtimg" onClick={() => window.open(listURL_liverpool, "_blank")}>
+							-Liverpool-
 						</button>
 					</div>
 
